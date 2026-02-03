@@ -84,7 +84,6 @@ The platform includes interactive visualizations and explanations for algorithms
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build locally
-- `npm run deploy` - Deploy to GitHub Pages
 
 ## 📦 Build for Production
 
@@ -93,32 +92,6 @@ npm run build
 ```
 
 The optimized production files will be generated in the `dist/` directory.
-
-## 🌍 Deployment
-
-This project is deployed on GitHub Pages with a custom domain. To deploy your own version:
-
-1. **Fork this repository**
-2. **Update the homepage in package.json** (if using a different repository name)
-3. **Configure GitHub Pages** in repository settings
-4. **Run deployment:**
-   ```bash
-   npm run deploy
-   ```
-
-### Custom Domain Setup
-
-If you want to use a custom domain:
-
-1. Add DNS A records pointing to GitHub's IPs:
-   - 185.199.108.153
-   - 185.199.109.153
-   - 185.199.110.153
-   - 185.199.111.153
-
-2. Add a CNAME record for www subdomain pointing to `<username>.github.io`
-
-3. Create a `CNAME` file in the `public/` directory with your domain name
 
 ## 🤝 Contributing
 
