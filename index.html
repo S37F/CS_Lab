@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSLab: Computer Science Learning Platform</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: {
+              primary: '#0a0a0b',
+              secondary: '#111111',
+              elevated: '#1a1a1a',
+            },
+            accent: {
+              primary: '#3b82f6',
+              success: '#10b981',
+              warning: '#f59e0b',
+            },
+            text: {
+              primary: '#ffffff',
+              secondary: '#d1d5db',
+              tertiary: '#9ca3af',
+            },
+            border: '#374151',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+  </style>
+
+<link rel="stylesheet" href="/index.css">
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.12",
+    "uuid": "https://aistudiocdn.com/uuid@^11.1.0",
+    "mongodb": "https://aistudiocdn.com/mongodb@^6.20.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/CS_Lab/assets/index-D6msQzME.js"></script>
+</head>
+<body class="bg-background-primary text-text-primary">
+  <div id="root"></div>
+</body>
+</html>
