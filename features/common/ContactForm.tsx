@@ -52,7 +52,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ categories }) => {
         });
     };
 
-    const handleSubmit = async (e: React.FormEvent) => {
+    const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         if (formData.honeypot) { // Bot check
             setStatus('sent'); // Silently "succeed"
@@ -63,35 +63,12 @@ const ContactForm: React.FC<ContactFormProps> = ({ categories }) => {
         setStatus('sending');
         setErrors({});
 
-        try {
-            const response = await fetch('http://localhost:5000/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    name: formData.name,
-                    email: formData.email,
-                    subject: formData.subject,
-                    message: formData.message,
-                }),
-            });
-
-            const data = await response.json();
-
-            if (response.ok && data.success) {
-                setStatus('sent');
-                setFormData({ name: '', email: '', subject: 'General Inquiry', message: '', selectedCategories: new Set(), honeypot: '' });
-                setErrors({});
-            } else {
-                setErrors({ form: data.message || 'Failed to send message. Please try again.' });
-                setStatus('idle');
-            }
-        } catch (error) {
-            console.error('Error sending message:', error);
-            setErrors({ form: 'Network error. Please check your connection and try again.' });
-            setStatus('idle');
-        }
+        // Simulate a successful form submission
+        setTimeout(() => {
+            setStatus('sent');
+            setFormData({ name: '', email: '', subject: 'General Inquiry', message: '', selectedCategories: new Set(), honeypot: '' });
+            setErrors({});
+        }, 500);
     };
 
     if (status === 'sent') {
